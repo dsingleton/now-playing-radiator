@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	
+	<title>Now Playing</title>
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
+    <link rel="stylesheet" href="np.css" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="np.js"></script>
+    
+</head>
+
+<body>
+    
+    <!-- 
+    
+    TODO
+    * pull usernae from url
+    * Handle no album cover
+    * Differentiate track/album
+    * Truncate track/album
+    * Add links
+    
+    -->
+    
+    <div id="page">
+        
+        <header>
+            Now Playing
+            <a id="update" href="javascript: update();">&#x267A;</a>
+        </header>
+
+        <article>
+            <hgroup>
+                <h2 id="artist">Artist</h2>
+                <h3 id="track">Track</h3>
+            </hgroup>
+            
+            <img id="album_cover" src="http://cdn.pastemagazine.com/www/articles/2010/06/22/vinyl_main.jpg?1277205191" />
+            
+            <div id="bio"></div>
+            
+        </article>
+
+        <footer>
+            
+        </footer>
+        
+    </div>
+</body>
+</html>

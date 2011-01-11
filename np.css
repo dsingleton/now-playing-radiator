@@ -1,0 +1,101 @@
+body {
+    font: medium/1.3 "Droid Sans", "Helvetica", "Arial", "Sans-Serif";
+    
+    color: #ccc;
+    background: #333;
+    padding: 2.5%;
+}
+
+#page {
+    padding: 1.5% 5%;
+    
+    color: #fff;
+    background: #666;
+    border: 5px solid #777;
+    
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    max-width: 1200px;
+    -webkit-box-shadow: #222 2px 2px 5px; 
+}
+
+header {
+    font-size: 2em;
+    color: #888;
+}
+
+header a#update {
+    color: #888;
+    text-decoration: none;
+}
+
+header:hover a#update {
+   color: #aaa;
+   text-shadow: 2px 0px 0px  #555;
+}
+
+footer {
+    margin: 3em 0 0;
+    clear: both;
+}
+
+article {
+    float: left;
+    background: #5f5f5f;
+    margin: 1em -2em;
+    padding: 1em 2em 1em;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 3px solid #5a5a5a;
+}
+
+article hgroup h2,
+article hgroup h3 {
+    text-shadow: 2px 2px 2px #555;
+    font-size: 3em;
+    margin: 0;
+}
+
+article hgroup h3 {
+    color: #bbb;
+    margin: .25em 0 1em;
+    padding: .25em 0 0 0;
+    border-top: 3px solid #888;
+}
+
+aside {
+    font-size: 80%;
+}
+
+#album_cover {
+    border: 3px solid #ccc;
+    padding: 1px;
+    
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    
+    float: left;
+    margin: 0 2em 2em 0;
+}
+
+#bio {
+    color: #eee;
+    line-height: 1.5;
+    
+    font-family: Georgia, serif;
+}
+
+#bio a {
+    color: DodgerBlue;
+    text-decoration: none;
+}
+#bio span {
+    text-shadow: 2px 2px 2px #555;
+    font-size: 110%;
+}
+/*rel=tag/bbcode_tag
+bbcode*/
