@@ -1,0 +1,11 @@
+h1. TODO
+
+h2. UI
+
+* Redesign
+
+h2. JS
+
+* Handle no album cover
+* Truncate track/album
+* Add links
