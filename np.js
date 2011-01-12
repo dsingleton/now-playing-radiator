@@ -67,12 +67,16 @@ function update()
 }
 
 $(document).ready(function() {
+    init();
+});
+
+function init()
+{
     update();
     setInterval(update, 1000 * CONFIG.refresh);
 
     window.addEventListener("hashchange", update, false);
-});
-
+}
 
 function clear() {
     $('#artist').text('');

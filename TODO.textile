@@ -2,7 +2,7 @@ h1. TODO
 
 h2. UI
 
-* Redesign
+*
 
 h2. JS
 
