@@ -6,8 +6,9 @@ html {
 }
 
 body {
-
+    margin: 0 auto;
     padding: 2.5%;
+    max-width: 1200px;
 }
 
 article {
@@ -24,7 +25,6 @@ article {
     -moz-border-radius: 15px;
     border-radius: 15px;
     
-    max-width: 1200px;
     -webkit-box-shadow: #222 2px 2px 5px; 
 }
 
