@@ -26,7 +26,7 @@ NowPlaying.prototype = {
         this.update();
         
         // Try and avoid repainting the screen when the track hasn't changed
-        setTimeout(jQuery.proxy(this.update, this), this.interval * 1000);
+        setInterval(jQuery.proxy(this.update, this), this.interval * 1000);
     },
     
     handleResponse: function(response)
