@@ -1,3 +1,11 @@
-A standalone information radiator of what a user is scrobbling.
+A standalone information radiator for a Last.fm users now-playing track.
 
-It has no depenencies on serverside languages and is built entirely on JSONP and javascript
+h2. The Good
+
+* Entirely client side, no server logic, only JSONP
+* Has two modes, single load and auto refresh (with a configurable interval)
+
+h2. The Bad
+
+* Dependant on jQuery
+* Uses example Last.fm API key (needs fixing)

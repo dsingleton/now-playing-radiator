@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 1em 5em;
+    
+    max-width: 60em;
+    
+    font: medium/1.3 "Droid Sans", sans-serif;
+    background: #F2F4EC;
+    color: #1b1b1b;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 5em;
+}
+
+a {
+    text-decoration: none;
+    color: #036;
+}
+
+a:hover {
+    color: #fff;
+}
+
+header {
+    text-align: right;
+    color: #999;
+}
+
+#page.inactive aside {
+    display: none;
+}
+
+#artist,
+#track {
+    display: inline-block;
+    margin: .25em 0;
+    padding: .2em .4em;    
+    
+    border-radius: 2px;
+    
+    background: dodgerBlue;
+    box-shadow: 0 0 10px dodgerBlue;
+}
+
+#track {
+    background: DarkOrange;
+    box-shadow: 0 0 10px DarkOrange;
+}
+
+article .separator {
+    display: none;
+}

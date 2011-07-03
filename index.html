@@ -1,41 +1,42 @@
 <!doctype html>
-<html lang="en">
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-	
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
 	<title>Now Playing</title>
-
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-    
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
-    <link rel="stylesheet" href="np.css" type="text/css" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script src="np.js"></script>
-    
+    <script src="js/lfm.js"></script>
+    <script src="js/np.js"></script>
 </head>
 
 <body>
     
-    <div id="page">
+    <div id="page" class="inactive">
         
         <header>
             Now Playing
-            <a id="update" href="javascript: update();">&#x267A;</a>
         </header>
 
         <article>
-            <hgroup>
-                <h2 id="artist">Artist</h2>
-                <h3 id="track">Track</h3>
-            </hgroup>
-            
-            <img width="300" height="300" id="album_cover" src="" />
-            
-            <div id="bio"></div>
-            
+            <h1>
+                <span id="artist">Artist</span>
+                <span class="separator">&mdash;</span> 
+                <span id="track">Track</span>
+            </h1>
+        
+            <aside>
+                <p id="bio"></p>
+                <ul id="tags"></ul>
+            </aside>
         </article>
 
         <footer>
