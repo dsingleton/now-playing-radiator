@@ -36,7 +36,7 @@ LastfmAPI.prototype = {
                 success(track);
             }
             else {
-                success(track);
+                success(false);
             }
         });
     }
