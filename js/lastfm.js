@@ -13,21 +13,29 @@ LastfmAPI = function(api_key) {
 LastfmAPI.prototype = {
     root: 'http://ws.audioscrobbler.com/2.0/',
     
-    get: function (method, params, success)
+    get: function (method, params, success, error)
     {
         jQuery.ajax({
             url: this.root,
             dataType: "jsonp",
-            success: success,
             data: jQuery.extend({
                 'api_key': this.api_key,
                 'format': 'json',
                 'method': method
-            }, params)
+            }, params),
+            // Forces JSONP errors to fire, needs re-evaluation if long polling is used
+            timeout: 2000
+        })
+        .success(function(response) { 
+            (response.error ? error : success)(response);
+        })
+        .error(function() {
+            // JSONP limitations mean we'll only get timeout errors
+            console.log({error: 0, message: 'HTTP Error'});
         });
     },
     
-    getNowPlayingTrack: function(user, success)
+    getNowPlayingTrack: function(user, success, error)
     {
         this.get('user.recenttracks', {user: user}, function(response) {
             var track = response.recenttracks.track[0];
@@ -38,6 +46,6 @@ LastfmAPI.prototype = {
             else {
                 success(false);
             }
-        });
+        }, error);
     }
 };

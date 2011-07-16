@@ -15,7 +15,11 @@ NowPlaying.prototype = {
     
     update: function()
     {
-        this.api.getNowPlayingTrack(this.user, jQuery.proxy(this.handleResponse, this));
+        this.api.getNowPlayingTrack(
+            this.user,
+            jQuery.proxy(this.handleResponse, this), 
+            function(error) { console && console.log(error); }
+        );
     },
     
     autoUpdate: function()
