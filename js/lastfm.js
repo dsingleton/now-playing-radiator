@@ -23,9 +23,15 @@ LastfmAPI.prototype = {
                 'format': 'json',
                 'method': method
             }, params),
-            success: function(response) { 
-                (response.error ? error : success)(response);
-            }
+            // Forces JSONP errors to fire, needs re-evaluation if long polling is used
+            timeout: 2000
+        })
+        .success(function(response) { 
+            (response.error ? error : success)(response);
+        })
+        .error(function() {
+            // JSONP limitations mean we'll only get timeout errors
+            console.log({error: 0, message: 'HTTP Error'});
         });
     },
     
