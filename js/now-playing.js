@@ -8,9 +8,7 @@ NowPlaying = function(api, user) {
 NowPlaying.prototype = {
     
     display: function(track)
-    {
-        this.track = track;
-        
+    {        
         $('#artist').text(track.artist);
         $('#track').text(track.name);
     },
@@ -42,13 +40,3 @@ NowPlaying.prototype = {
         }
     }
 };
-
-$(document).ready(function() {
-    
-    // format: #!/user/username
-    var username = document.location.hash.split('/')[2];
-    var api = new LastfmAPI('b25b959554ed76058ac220b7b2e0a026');
-    
-    np = new NowPlaying(api, username);
-    np.autoUpdate();
-});
