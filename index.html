@@ -27,7 +27,7 @@
 
         // format: #!/user/username, prompt fallback (but that won't persist, boo)
         var username = document.location.hash.split('/')[2] || prompt('Enter a Last.fm username?');
-        var api = new LastfmAPI('b25b959554ed76058ac220b7b2e0a026');
+        var api = new LastfmAPI('5f134f063744307ee6f126ac2c480fab');
 
         np = new NowPlaying(api, username);
         np.autoUpdate();

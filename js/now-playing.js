@@ -35,7 +35,8 @@ NowPlaying.prototype = {
     {
         if (response) {
             this.display({
-                artist: response.artist['#text'],
+                // The API response can vary depending on the user, so be defensive
+                artist: response.artist['#text'] || response.artist.name,
                 name: response.name
             });
         }
