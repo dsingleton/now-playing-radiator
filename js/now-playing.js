@@ -4,6 +4,8 @@ NowPlaying = function(api, user) {
     
     /* Used for autoUpdate */
     this.interval = 5;
+    
+    this.onChangeEvents = [];
 };
 NowPlaying.prototype = {
     
@@ -17,7 +19,11 @@ NowPlaying.prototype = {
     {
         this.api.getNowPlayingTrack(
             this.user,
-            jQuery.proxy(this.handleResponse, this), 
+            jQuery.proxy((function(track) {
+                this.onChangeEvents.forEach(function(func) {
+                    func(track);
+                });
+            }), this),
             function(error) { console && console.log(error); }
         );
     },
@@ -31,17 +37,7 @@ NowPlaying.prototype = {
         setInterval(jQuery.proxy(this.update, this), this.interval * 1000);
     },
     
-    handleResponse: function(response)
-    {
-        if (response) {
-            this.display({
-                // The API response can vary depending on the user, so be defensive
-                artist: response.artist['#text'] || response.artist.name,
-                name: response.name
-            });
-        }
-        else {
-            this.display({artist: ' ', name: ''});
-        }
+    bindOnChange: function(func) {
+        this.onChangeEvents.push(func);
     }
 };

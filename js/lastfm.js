@@ -41,6 +41,8 @@ LastfmAPI.prototype = {
             var track = response.recenttracks.track[0];
             
             if (track && track['@attr'] && track['@attr'].nowplaying) {
+                // The API response can vary depending on the user, so be defensive
+                track.artist = track.artist['#text'] || track.artist.name;
                 success(track);
             }
             else {

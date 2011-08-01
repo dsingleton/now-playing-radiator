@@ -31,6 +31,9 @@
 
         np = new NowPlaying(api, username);
         np.autoUpdate();
+        np.bindOnChange(function(track) {
+           np.display(track); 
+        });
     });
     </script>
 </head>
