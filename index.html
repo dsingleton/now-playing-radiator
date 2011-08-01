@@ -23,15 +23,37 @@
     <script src="js/now-playing.js"></script>
     
     <script>
-    $(document).ready(function() {
+    
+    (function (document) {
+        
+        var get_username = function() {
+            // format: #username, or #!/user/username, prompt fallback
+            return document.location.hash.split('/')[2] || 
+                           document.location.hash.substring(1) || 
+                           prompt('Enter a Last.fm username?');
+        };
+    
+        $(document).ready(function() {        
+            // Canonicalise/Persist hash
+            document.location.hash = username = get_username();
+        
+            var api = new LastfmAPI('5f134f063744307ee6f126ac2c480fab');
 
-        // format: #!/user/username, prompt fallback (but that won't persist, boo)
-        var username = document.location.hash.split('/')[2] || prompt('Enter a Last.fm username?');
-        var api = new LastfmAPI('5f134f063744307ee6f126ac2c480fab');
-
-        np = new NowPlaying(api, username);
-        np.autoUpdate();
-    });
+            np = new NowPlaying(api, username);
+            np.autoUpdate();
+        });
+    
+        // Needs replacing with a cross browser jquery plugin
+        window.onhashchange = function(event) {
+            username = get_username();
+            if (username != np.user) {
+                np.user = username;
+                np.update();
+            }
+        };
+        
+    })(document);
+    
     </script>
 </head>
 
