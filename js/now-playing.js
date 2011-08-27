@@ -1,9 +1,9 @@
-NowPlaying = function(api, user) {
+NowPlaying = function(api, user, interval) {
     this.api = api;
     this.user = user;
     
-    /* Used for autoUpdate */
-    this.interval = 5;
+    /* AutoUpdate frequency - Last.fm API rate limits at 1/sec */
+    this.interval = interval || 5;
 };
 NowPlaying.prototype = {
     

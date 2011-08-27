@@ -9,7 +9,6 @@ http://dsingleton.github.com/now-playing-radiator
 
 h2. Todo
 
-* Configurable delay
 * Footer credit (bigger on doc page)
 * Cleanup css/markup
 * Link to http://www.last.fm/home/friends
