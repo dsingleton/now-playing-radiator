@@ -1,11 +1,22 @@
-A standalone information radiator for a Last.fm users now-playing track.
+A  "second screen" / ""information radiator" / "glancable" /  for a Last.fm users now-playing track.
 
-h2. The Good
+* No dependencies - Only uses client-side Javascript (no server-side requirement). You can run this anywhere with a browser.
+* Device agnostic - Works well on desktops, laptops, phones, tablets, even the kindle.
 
-* Entirely client side, no server logic, only JSONP
-* Has two modes, single load and auto refresh (with a configurable interval)
+h2. Demo
 
-h2. The Bad
+http://dsingleton.github.com/now-playing-radiator
 
-* Dependant on jQuery
-* Uses example Last.fm API key (needs fixing)
+h2. Todo
+
+* Configurable delay
+* Footer credit (bigger on doc page)
+* Cleanup css/markup
+* Link to http://www.last.fm/home/friends
+
+h3. Future plans
+
+* Playing/not-playing selector hooks, for styling
+* More info modal (Bootstrap modal CSS, lazy loaded content, )
+* Display username/link
+* Responsive design font-size adjustment
