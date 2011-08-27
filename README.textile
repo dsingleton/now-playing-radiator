@@ -5,12 +5,9 @@ A  "second screen" / ""information radiator" / "glancable" /  for a Last.fm user
 
 h2. Demo
 
-http://dsingleton.github.com/now-playing-radiator
+Try it out: "http://dsingleton.github.com/now-playing-radiator":http://dsingleton.github.com/now-playing-radiator
 
 h2. Todo
-
-* Footer credit (bigger on doc page)
-* Link to http://www.last.fm/home/friends
 
 h3. Future plans
 

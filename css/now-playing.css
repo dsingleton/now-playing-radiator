@@ -15,11 +15,15 @@ h1 {
     font-size: 5em;
 }
 
-header {
+header, footer {
     text-align: right;
-    color: #999;
+    color: #ccc;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
+}
+
+header a, footer a {
+    color: #bababa;
 }
 
 /** Artist + Track */
