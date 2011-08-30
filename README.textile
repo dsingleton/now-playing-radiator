@@ -1,17 +1,24 @@
-A  "second screen" / ""information radiator" / "glancable" /  for a Last.fm users now-playing track.
+h1. Now playing radiator
 
-* No dependencies - Only uses client-side Javascript (no server-side requirement). You can run this anywhere with a browser.
-* Device agnostic - Works well on desktops, laptops, phones, tablets, even the kindle.
+A  _second screen/information radiator/glancable_ for a Last.fm users now-playing track.
 
-h2. Demo
+!http://farm7.static.flickr.com/6198/6086155862_ed082dee0f.jpg!:http://www.flickr.com/photos/davidsingleton/6086155862/
 
-Try it out: "http://dsingleton.github.com/now-playing-radiator":http://dsingleton.github.com/now-playing-radiator
+Handy knowing what's playing without having iTunes open, an information radiator for a shared office radio, 'now playing' screen at an awesome party. It's also&hellip;
+
+* 100% client side - Made out of Javascript, CSS and HTML, no server side stuff. Easy to check out and run locally.
+* Super adapatable - It renders well on all devices, big monitors, laptops, phones, tablets and even on the kindle.
+* Totally real time - Well, it's polling, but it feels pretty snappy.
+
+"Read more":http://dsingleton.co.uk/blog/last-fm-now-playing-information-radiator about it or try the "sweet demo":http://dsingleton.github.com/now-playing-radiator.
 
 h2. Todo
 
-h3. Future plans
+Some small and large improvements I plan make, in rough order:
 
-* Playing/not-playing selector hooks, for styling
-* More info modal (Bootstrap modal CSS, lazy loaded content, )
-* Display username/link
-* Responsive design font-size adjustment
+* Position footer absolutely, to avoid it jumping about
+* Add page context username/link to top header
+* Adjust default font sizes on extreme devices (mobile / large monitors) for optimal line length
+* Improved context in title bar for easy tab referencing
+* Improve speed of track change. Smart polling, setup an additional, higher frequency, polling window around the track end (based on duration)
+* Adding more metadata (album art, bio, tags, etc) but keep the default view minimal. Probably a click/key interaction that launches a modal.
