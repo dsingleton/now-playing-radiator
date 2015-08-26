@@ -10,7 +10,7 @@ Handy knowing what's playing without having iTunes open, an information radiator
 * Super adapatable - It renders well on all devices, big monitors, laptops, phones, tablets and even on the kindle.
 * Totally real time - Well, it's polling, but it feels pretty snappy.
 
-"Read more":http://dsingleton.co.uk/blog/last-fm-now-playing-information-radiator about it or try the "sweet demo":http://dsingleton.github.com/now-playing-radiator.
+"Read more":http://dsingleton.co.uk/blog/last-fm-now-playing-information-radiator about it or try the "sweet demo":https://dsingleton.github.com/now-playing-radiator.
 
 h2. Todo
 
