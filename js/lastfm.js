@@ -11,7 +11,7 @@ LastfmAPI = function(api_key) {
     this.api_key = api_key;
 };
 LastfmAPI.prototype = {
-    root: 'http://ws.audioscrobbler.com/2.0/',
+    root: 'https://ws.audioscrobbler.com/2.0/',
     
     get: function (method, params, success, error)
     {
